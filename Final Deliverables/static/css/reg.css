@@ -3,22 +3,16 @@
     --font-size:     14px;
     --font-ddf:      "Roboto";   
     --color-primary: #ABA194;
-    
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
+html,
 body {
+    overflow: hidden;
+    margin: 0;
+    min-height: 100vh;
     font-family: --font-family;
     font-size: --font-size;
-    background-size: 200% 100% !important;
-    animation: move 7s ease infinite;
-    transform: translate3d(0, 0, 0);
-    background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
-    height: 100vh
+    background: linear-gradient(45deg, #ffffff 10%, #A2C7E5 10%, #cbcbcb 10%);
 }
 
 .user {
@@ -26,14 +20,16 @@ body {
     max-width: 340px;
     margin: 4vh auto;
 }
+
 .logo{
     height: 140px;
 }
+
 .user__header {
     text-align: left;
     opacity: 0;
     transform: translate3d(0, 500px, 0);
-    animation: arrive 500ms ease-in-out 0.7s forwards;
+    animation: arrive 100ms ease-in-out 0.5s forwards;
 }
 
 .user__title {
@@ -44,18 +40,22 @@ body {
     color: white;
 }
 
+.card-body{
+    background-color: azure !important;
+}
+
 .form {
     margin-top: 40px;
     border-radius: 6px;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 50px, 0);
-    animation: arrive 500ms ease-in-out 0.9s forwards;
+    animation: arrive 100ms ease-in-out 0.5s forwards;
 }
 
 .form--no {
-    animation: NO 1s ease-in-out;
-    opacity: 1;
+    animation: NO .5s ease-in-out;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
 }
 
@@ -67,11 +67,11 @@ body {
     --webkit-appearance: none;
     border: 0;
     outline: 0;
-    transition: 0.3s;
+    transition: 0.2s;
 }
+
 .form__input:hover{
     background: darken(#fff, 3%);
-
 }
 
 .btn {
@@ -84,7 +84,7 @@ body {
     border: 0;
     color: white;
     background: #49D49D;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .btn:hover{
     background: darken(--color-primary, 5%);
@@ -110,7 +110,7 @@ body {
 @keyframes arrive {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
     
     100% {
@@ -121,7 +121,7 @@ body {
 
 @keyframes move {
     0% {
-        background-position: 0 0
+        background-position: 50% 0
     }
 
     50% {

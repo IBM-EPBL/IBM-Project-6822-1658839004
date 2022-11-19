@@ -33,14 +33,30 @@
         <form action="register" class="form" method="post">
             <div class="form__group"><input type="text" name="username" placeholder="Enter Your Username"  id="username" class="form__input" required /></div>
             <div class="form__group"><input type="email" name="email" placeholder="Enter Your Email ID"  id="email" class="form__input" required/></div>
-            <div class="form__group"><input type="password" name="password" placeholder="Enter Your Password" id="password" class="form__input" required /></div>
+            <div class="form__group"><input type="password" name="password" placeholder="Enter Your Password" id="password" class="form__input" required /></div><br>
             <button class="btn" type="submit">Register</button>
         </form>
         </div>
     <div class="note text-center">
         <p>Already have an account? <a href="login">Login</a></p>   
     </div>
+    <div class="alert">
+        <p><b>{{msg}}</b></p>
     </div>
+    </div>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "e22dcd16-3b9c-407a-90dc-0d175d6708eb", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "9f2196de-4c2c-4b82-874b-9768ad3501e4", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
 </body>
 </html>
 

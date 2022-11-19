@@ -12,6 +12,12 @@
 
  }
 
+ .menu{
+    height: 100px;
+ }
+.donate-sponsor{
+    width: 150px;
+}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .navbar {
@@ -107,6 +113,18 @@
     .footer-links.inline li {
         display: inline-block;
     }
+
+    .our-focus{
+        background-clip: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: .7;
+    }
+    .our-focus .card{
+        background-clip: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: .7;
+    }
+
     .footer-links li a{
         color: black;
     }
@@ -147,5 +165,23 @@
 @media (min-width: 1400px) { 
     .navbar-brand{
         padding-left: 15px;
+    }
+ }
+
+
+ .alert{
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fade 5s forwards ease-in;
+ }
+
+ @keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
  }
